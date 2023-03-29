@@ -1,0 +1,173 @@
+html,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  background: url(../public/coffee-apple.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html,
+#root .appLight {
+  background-color: #ffffff77;
+  min-height: 1080px;
+}
+
+html,
+#root .appDark {
+  background-color: #0313277a;
+  min-height: 1080px;
+}
+
+a {
+  color: inherit;
+  cursor: default;
+  text-decoration: none;
+  height: 100%;
+
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content;
+  row-gap: 1em;
+
+}
+
+.content {
+  display: grid;
+  column-gap: 1em;
+
+}
+
+.content .sideB,
+.content .scenes {
+  border: 1px solid rgb(99, 92, 92);
+  border-radius: 5px;
+
+  display: grid;
+  height: max-content !important;
+  gap: 0.5em;
+
+}
+
+.content>.sideB ul,
+.content>.sideB li {
+  border: 1px solid rgba(23, 5, 93, 0.295);
+  display: grid;
+  gap: 1em;
+
+  justify-content: stretch
+
+}
+
+.main {
+  border: 3px solid #064a30;
+  text-align: justify;
+
+  align-items: stretch;
+  justify-items: stretch;
+
+}
+
+/* Clases para dispositivos grades*/
+@media only screen and (min-width: 769px) {
+  .layout {
+    /* DEVOLVER A 4EM */
+    margin-inline: 4em;
+  }
+
+  .content {
+    grid-template-columns: max-content auto;
+  }
+
+  .sideB {
+    grid-template-columns: 1fr;
+    min-width: 4em;
+  }
+
+  .main {
+    border: 3px solid #064a30;
+
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    justify-items: stretch;
+    gap: 1em;
+    text-align: justify;
+  }
+
+}
+
+/* Clases para dispositivos Pequeños */
+@media only screen and (max-width: 768px) {
+
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sideB {}
+
+  .content>.sideB ul {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #home {
+    border: 1px solid rgba(164, 126, 11, 0.776);
+    border-radius: 10px;
+    display: grid;
+    justify-content: stretch;
+    height: 100%;
+  }
+
+  #botonHome {
+    display: grid;
+    justify-content: stretch;
+    align-items: start;
+    height: 100%;
+    padding-top: 0px
+  }
+
+  #listItemIconHome {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+  }
+
+  #home p {
+    font-size: 1em;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
